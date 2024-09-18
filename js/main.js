@@ -6,24 +6,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuBtn = document.querySelector('.menu-btn');
     const navigation = document.querySelector('.navigation');
 
-    // Функция для проверки размера экрана и скрытия/показа элементов
     function updateMenuVisibility() {
         if (window.innerWidth <= 768) {
-            navigation.classList.remove('active'); // Убираем активное состояние меню
-            menuBtn.style.display = 'block'; // Показываем кнопку меню
+            navigation.classList.remove('active'); 
+            menuBtn.style.display = 'block'; 
         } else {
-            navigation.classList.remove('active'); // Убираем активное состояние меню на больших экранах
-            menuBtn.style.display = 'none'; // Скрываем кнопку меню на больших экранах
+            navigation.classList.remove('active'); 
+            menuBtn.style.display = 'none'; 
         }
     }
 
-    // Обновляем видимость меню при загрузке страницы и переходе на другую страницу
-    updateMenuVisibility(); // Вызов сразу после загрузки страницы
+    updateMenuVisibility(); 
 
-    // Обновляем видимость меню при изменении размера окна
     window.addEventListener('resize', updateMenuVisibility);
 
-    // Переключение форм логина и регистрации
     if (registerLink) {
         registerLink.addEventListener('click', () => {
             wrapper.classList.add('active');
@@ -36,15 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Обработчик клика для меню на маленьких экранах
     if (menuBtn) {
         menuBtn.addEventListener('click', function() {
-            this.classList.toggle('active'); // Анимация иконки
-            navigation.classList.toggle('active'); // Показать/скрыть навигацию
+            this.classList.toggle('active'); 
+            navigation.classList.toggle('active'); 
         });
     }
 
-    // Перенаправление на страницу логина
     if (btnLoginPopup) {
         btnLoginPopup.addEventListener('click', () => {
             window.location.href = 'login.html';
