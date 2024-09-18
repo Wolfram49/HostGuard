@@ -95,3 +95,46 @@ body {
     background: #fff;
     color: #162938;
 }
+
+.menu-btn {
+    display: none;
+}
+
+@media (max-width: 1050px) {
+    header {
+        padding: 20px;
+        justify-content: flex-end; 
+    }
+
+    .logo {
+        display: none; 
+    }
+
+    .navigation {
+        display: none; 
+    }
+
+    .menu-btn {
+        display: inline-block; 
+        font-size: 2em;
+        color: #fff;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .menu-btn.active + .navigation {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .navigation a {
+        margin: 10px 0;
+        font-size: 1.5em;
+    }
+}
