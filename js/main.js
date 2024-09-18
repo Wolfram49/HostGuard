@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navigation = document.querySelector('.navigation');
 
     function updateMenuVisibility() {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 1050) {
             navigation.classList.remove('active'); 
             menuBtn.style.display = 'block'; 
         } else {
