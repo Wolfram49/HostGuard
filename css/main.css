@@ -19,7 +19,6 @@ header {
     z-index: 99;
 
 }
-
 body {
     display: flex;
     justify-content: center;
@@ -69,6 +68,10 @@ body {
 
 .navigation a:hover::after {
     transform: scaleX(1);
+}
+
+.menu-btn {
+    display: none; 
 }
 
 .navigation .btnLogin-popup {
