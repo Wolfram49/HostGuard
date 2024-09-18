@@ -441,7 +441,7 @@ ul {
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 830px) {
     .wrapper {
         position: relative;
         width: 360px;
