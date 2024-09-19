@@ -462,7 +462,7 @@ ul {
 @media (max-width: 830px) {
     .wrapper {
         position: relative;
-        top: 100px;
+        top: 150px;
         width: 360px;
         height: 400px;
         margin-top: -25px;
