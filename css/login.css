@@ -443,7 +443,7 @@ ul {
         transform: translateX(-100%); 
         position: fixed;
         top: 0;
-        left: -5px;
+        left: 0;
         height: 100vh; 
         width: 250px; 
         z-index: 100; 
@@ -530,13 +530,14 @@ ul {
     }
 
     .navigation a {
-        margin: 5px 0;
+        margin: 5px 1px;
         font-size: 1em;
         
     }
     
     .navigation a, .navigation .loginmb {
         padding: 10px 20px;
+        margin: none 1px;
     }
     
     .navigation {
