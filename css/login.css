@@ -440,10 +440,10 @@ ul {
         background-color: rgba(0, 0, 0, 0.7); 
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
         transition: transform 0.3s ease;
-        transform: translateX(-110%); 
+        transform: translateX(-100%); 
         position: fixed;
         top: 0;
-        left: 0;
+        left: -5px;
         height: 100vh; 
         width: 250px; 
         z-index: 100; 
