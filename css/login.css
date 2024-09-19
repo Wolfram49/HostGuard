@@ -530,14 +530,13 @@ ul {
     }
 
     .navigation a {
-        margin: 5px 1px;
+        margin: 5px 0;
         font-size: 1em;
         
     }
     
     .navigation a, .navigation .loginmb {
         padding: 10px 20px;
-        margin: none 1px;
     }
     
     .navigation {
