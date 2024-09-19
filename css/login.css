@@ -437,6 +437,13 @@ body {
         
     }
 
+    .form-box h2 {
+        font-size: 2em;
+        margin-bottom: -30px;
+        color: #ffffff;
+        text-align: center;
+    }
+
     .navigation a {
         margin: 5px 0;
         font-size: 1em;
