@@ -20,6 +20,10 @@ header {
 
 }
 
+header.hide{
+    transform: translateY(-100%);
+}
+
 body {
     display: flex;
     justify-content: center;

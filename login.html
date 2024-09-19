@@ -126,6 +126,22 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script>
+        const header = document.querySelector('header');
+        let prevScrollpos = window.pageYOffset;
+
+        window.addEventListener('scroll', ()=>{
+            let currentScrollPos = window.pageYOffset;
+
+            if(prevScrollpos = window.pageYOffset){
+                header.classList.add('hide');
+            }else{
+                header.classList.remove('hide');
+            }
+
+            prevScrollpos = currentScrollPos;
+        })
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
