@@ -29,9 +29,23 @@
             </button>
         </nav>
     </header>
-
-
     <script src="js/main.js"></script>
+    <script>
+        const header = document.querySelector('header');
+        let prevScrollpos = window.pageYOffset;
+
+        window.addEventListener('scroll', ()=>{
+            let currentScrollPos = window.pageYOffset;
+
+            if(prevScrollpos = window.pageYOffset){
+                header.classList.add('hide');
+            }else{
+                header.classList.remove('hide');
+            }
+
+            prevScrollpos = currentScrollPos;
+        })
+    </script>
 </body>
 
 </html>

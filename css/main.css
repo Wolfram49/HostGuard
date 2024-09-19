@@ -196,6 +196,10 @@ body {
         z-index: 100; 
     }
     
+    header.hide{
+        transform: translateY(-100%);
+    }
+    
     .navigation a, .navigation .loginmb {
         display: block;
         padding: 10px 20px;
