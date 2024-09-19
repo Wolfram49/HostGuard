@@ -8,10 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateMenuVisibility() {
         if (window.innerWidth <= 1050) {
-            navigation.classList.remove('active'); 
             menuBtn.style.display = 'block'; 
         } else {
-            navigation.classList.remove('active'); 
             menuBtn.style.display = 'none'; 
         }
     }
@@ -44,4 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'login.html';
         });
     }
+
+    // Обработчик для закрытия навигации при клике вне ее
+    document.addEventListener('click', (event) => {
+        if (!navigation.contains(event.target) && !menuBtn.contains(event.target)) {
+            navigation.classList.remove('active'); // Закрываем панель
+            menuBtn.classList.remove('active'); // Убираем активный класс у кнопки меню
+        }
+    });
 });

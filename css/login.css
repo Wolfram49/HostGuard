@@ -432,31 +432,80 @@ ul {
     }
 
     .navigation {
-        display: none; 
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        backdrop-filter: blur(10px); 
+        background-color: rgba(0, 0, 0, 0.7); 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+        transition: transform 0.3s ease;
+        transform: translateX(-100%); 
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh; 
+        width: 250px; 
+        z-index: 100; 
+    }
+    
+    .navigation a, .navigation .loginmb {
+        display: block;
+        padding: 10px 20px;
+        margin-left: -20px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 16px;
+        border-bottom: 1px solid #bbbbbb; 
+    }
+
+    .navigation a:last-child, .navigation .loginmb:last-child {
+        border-bottom: none;
+    }
+
+    .navigation .btnLogin-popup {
+        background: #fff;
+        border: 2px solid #fff;
+        border-radius: 6px;
+        color: #162938;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 10px 20px;
+        margin-top: 10px; 
+        transition: background 0.5s, color 0.5s;
+    }
+
+    .navigation .btnLogin-popup:hover {
+        background: #ffdd57;
+        color: #162938;
     }
 
     .menu-btn {
-        display: inline-block; 
         font-size: 2em;
         color: #fff;
-        display: inline-block;
         cursor: pointer;
+        z-index: 102; 
     }
 
     .menu-btn.active + .navigation {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: rgba(0, 0, 0, 0.9);
-        padding: 20px;
-        border-radius: 10px;
+        transform: translateX(-100%); 
+        opacity: 0; 
+    }
+
+    .menu-btn.active + .navigation.active {
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+    
+    .navigation.active {
+        transform: translateX(0); 
+        opacity: 1; 
     }
 
     .navigation a {
         margin: 10px 0;
         font-size: 1.5em;
+        
     }
 }
 
@@ -478,6 +527,20 @@ ul {
         overflow: hidden;
         transition: height .2s ease;
         
+    }
+
+    .navigation a {
+        margin: 5px 0;
+        font-size: 1em;
+        
+    }
+    
+    .navigation a, .navigation .loginmb {
+        padding: 10px 20px;
+    }
+    
+    .navigation {
+        width: 200px; 
     }
 
     .footer {
