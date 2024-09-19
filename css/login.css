@@ -599,7 +599,9 @@ ul {
     .row {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between; /* Равномерное распределение колонок */
         margin-left: 85px;
+        transform: translateX(-50px);
     }
     
 }
